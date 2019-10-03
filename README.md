@@ -1,4 +1,5 @@
-# CDadosi7
-Repository for Data Science class at Técnico
+# Data Science
 
-Hey guys.
+>[https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre](https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre)
+
+Repository for Data Science class at Técnico
