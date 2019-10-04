@@ -84,10 +84,10 @@ b) Confusion matrix: <...>
 ## Evaluation criteria
 1. Statistical description (5%) 
 1. Preprocessing (20%)
-1. Unsupervised
+1. Unsupervised (15%)
     - Association Rules (7.5%)
     - Clustering (7.5%) 
-1. Classification
+1. Classification (20%)
     - Naïve Bayes (2%)
     - Instance-based Learning (3%) 
     - Decision Trees (5%)
