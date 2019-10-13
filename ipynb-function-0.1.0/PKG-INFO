@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ipynb-function
+Version: 0.1.0
+Summary: Package / Module importer for importing code from Jupyter Notebook files (.ipynb). This is a fork of ipynb that supports importing ipynb files as functions
+Home-page: http://github.com/jiaminglu/ipynb
+Author: Yuvi Panda, Jiaming Lu
+Author-email: yuvipanda@gmail.com;jiaminglu@live.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
