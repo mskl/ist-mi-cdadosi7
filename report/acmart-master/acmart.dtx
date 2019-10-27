@@ -112,6 +112,7 @@
 %  Enrico Gregorio,
 %  Jamie Davis,
 %  Peter Kemp,
+%  Kerry A. Seitz, Jr.,
 %  Luis Leiva,
 %  Ben Liblit,
 %  Rholais Lii,
@@ -288,8 +289,8 @@
 %     \normalfont Value & Meaning\\
 %     \midrule
 %   manuscript & A manuscript. This is the default. \\
-%   acmsmall & Small single-column format.  Used for CIE, CSUR, DTRAP,
-%            HEALTH, JACM, JDIQ, JEA, JERIC,
+%   acmsmall & Small single-column format.  Used for CIE, CSUR, 
+%            JACM, JDIQ, JEA, JERIC,
 %            JETC, PACMCGIT, PACMHCI, PACMPL, TAAS, TACCESS, TACO,
 %            TALG, TALLIP (formerly TALIP), TCPS, TDS,
 %            TEAC, TECS, TELO, THRI, TIIS, TIOT, TISSEC, TIST, TKDD, TMIS,
@@ -298,7 +299,7 @@
 %            TOMCCAP), TOMPECS, TOMS, TOPC, TOPLAS, TOPS,
 %            TOS, TOSEM, TOSN, TQC, TRETS,
 %            TSAS, TSC, TSLP and TWEB, including special issues. \\
-%   acmlarge  & Large single-column format.  Used for
+%   acmlarge  & Large single-column format.  Used for DTRAP, HEALTH,
 %           IMWUT, JOCCH, POMACS and TAP, including special issues. \\
 %   acmtog   & Large double-column format.  Used for
 %          TOG, including annual conference Technical Papers.\\
@@ -525,7 +526,7 @@
 % their e-mails in one command leads to a warning or an error.  This
 % is not a bug, but the expected behavior.
 %
-% Note that some formats do not typset e-mails or ORCID identifiers.
+% Note that some formats do not typeset e-mails or ORCID identifiers.
 % Do not worry: the metadata tools will get them.
 %
 % Sometimes an author has several affiliations.  In this case, the
@@ -1283,7 +1284,7 @@
 % not in the printed version.  The text inside the environment
 % |screenonly| will be typeset only when the option |screen| (see
 % Section~\ref{sec:invocation}) is set to |true|.  Conversely, the
-% text inside the environment |printonly| is typset only when this
+% text inside the environment |printonly| is typeset only when this
 % option is set to |false|.  For example,
 % \begin{verbatim}
 % \section{Supplementary materials}
@@ -1736,6 +1737,7 @@
 % \endfoot
 %     CIE & ACM Computers in Entertainment \\
 %     CSUR & ACM Computing Surveys\\
+%     DGOV & Digital Government: Research and Practice \\
 %     DTRAP &  Digital Threats: Research and Practice\\
 %     HEALTH & ACM Transactions on Computing for Healthcare\\
 %     IMWUT & PACM on Interactive, Mobile, Wearable and Ubiquitous
@@ -1828,7 +1830,7 @@
 \ProvidesFile{acmart.dtx}
 %</gobble>
 %<class>\ProvidesClass{acmart}
-[2019/08/24 v1.64 Typesetting articles for the Association for Computing Machinery]
+[2019/10/19 v1.65 Typesetting articles for the Association for Computing Machinery]
 %    \end{macrocode}
 %
 % \changes{v1.00}{2016/04/14}{First released version}
@@ -1923,6 +1925,7 @@
 % \changes{1.63a}{2019/08/05}{Move: TQUANT to TQC}
 % \changes{1.64}{2019/08/17}{Putting abstract after \cs{maketitle} now
 % causes an error}
+% \changes{1.65}{2019/10/19}{New journal: DGOV} 
 %
 % And the driver code:
 %    \begin{macrocode}
@@ -3494,6 +3497,7 @@
 \define@choicekey*+{ACM}{acmJournal}[\@journalCode\@journalCode@nr]{%
   CIE,%
   CSUR,%
+  DGOV,%
   DTRAP,%
   HEALTH,%
   IMWUT,%
@@ -3562,6 +3566,10 @@
   \def\@journalName{ACM Computing Surveys}%
   \def\@journalNameShort{ACM Comput. Surv.}%
   \def\@permissionCodeOne{0360-0300}%
+\or % DGOV
+  \def\@journalName{Digital Government: Research and Practice}%
+  \def\@journalNameShort{Digit. Gov. Res. Pract.}%
+  \def\@permissionCodeOne{2639-0175}%
 \or % DTRAP
   \def\@journalName{Digital Threats: Research and Practice}%
   \def\@journalNameShort{Digit. Threat. Res. Pract.}%
@@ -5826,6 +5834,7 @@
 %
 % \begin{macro}{\@mkauthorsaddresses}
 % \changes{v1.46}{2017/08/27}{Introduced macro}
+% \changes{v1.65}{2019/10/13}{Deleted cs{@addpunct}}
 % Typesetting authors' addresses in the footnote style
 %    \begin{macrocode}
 \def\@mkauthorsaddresses{%
@@ -5834,17 +5843,17 @@
   \ifnum\num@authorgroups>1\relax
   addresses: \else address: \fi
   \bgroup
-  \def\streetaddress##1{\unskip\@addpunct, ##1}%
-  \def\postcode##1{\unskip\@addpunct, ##1}%
+  \def\streetaddress##1{\unskip, ##1}%
+  \def\postcode##1{\unskip, ##1}%
   \def\position##1{\unskip\ignorespaces}%
-  \def\institution##1{\unskip\@addpunct, ##1}%
-  \def\city##1{\unskip\@addpunct, ##1}%
-  \def\state##1{\unskip\@addpunct, ##1}%
+  \def\institution##1{\unskip, ##1}%
+  \def\city##1{\unskip, ##1}%
+  \def\state##1{\unskip, ##1}%
   \renewcommand\department[2][0]{\unskip\@addpunct, ##2}%
-  \def\country##1{\unskip\@addpunct, ##1}%
-  \def\and{\unskip\@addpunct; }%
+  \def\country##1{\unskip, ##1}%
+  \def\and{\unskip; }%
   \def\@author##1{##1}%
-  \def\email##1##2{\unskip\@addpunct, \nolinkurl{##2}}%
+  \def\email##1##2{\unskip, \nolinkurl{##2}}%
   \addresses
   \egroup}
 %    \end{macrocode}

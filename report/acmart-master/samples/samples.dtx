@@ -1,28 +1,15 @@
-%%
-%% This is file `sample-sigchi.tex',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% samples.dtx  (with options: `sigchi')
+%<*manuscript|acmsmall|acmlarge|acmtog|sigconf|authordraft|sigplan|sigchi|sigchi-a|acmsmall-conf>
 %% 
-%% IMPORTANT NOTICE:
-%% 
-%% For the copyright see the source file.
-%% 
-%% Any modified versions of this file must be renamed
-%% with new filenames distinct from sample-sigchi.tex.
-%% 
-%% For distribution of the original source see the terms
-%% for copying and modification in the file samples.dtx.
-%% 
-%% This generated file may be distributed as long as the
-%% original source files, as listed above, are part of the
-%% same distribution. (The sources need not necessarily be
-%% in the same archive or directory.)
-%%
 %% The first command in your LaTeX source must be the \documentclass command.
-\documentclass[sigchi]{acmart}
+%<manuscript>\documentclass[manuscript,screen]{acmart}
+%<acmsmall|acmsmall-conf>\documentclass[acmsmall]{acmart}
+%<acmlarge>\documentclass[acmlarge]{acmart}
+%<acmtog>\documentclass[acmtog]{acmart}
+%<sigconf>\documentclass[sigconf]{acmart}
+%<authordraft>\documentclass[sigconf,authordraft]{acmart}
+%<sigplan>\documentclass[sigplan,screen]{acmart}
+%<sigchi>\documentclass[sigchi]{acmart}
+%<sigchi-a>\documentclass[sigchi-a]{acmart}
 
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
@@ -35,26 +22,44 @@
 %% values in them; it is your responsibility as an author to replace
 %% the commands and values with those provided to you when you
 %% complete the rights form.
+%
 \setcopyright{acmcopyright}
 \copyrightyear{2018}
 \acmYear{2018}
 \acmDOI{10.1145/1122445.1122456}
 
+%</manuscript|acmsmall|acmlarge|acmtog|sigconf|authordraft|sigplan|sigchi|sigchi-a|acmsmall-conf>
+%<*manuscript|sigconf|authordraft|sigplan|sigchi|sigchi-a|acmsmall-conf>
 %% These commands are for a PROCEEDINGS abstract or paper.
 \acmConference[Woodstock '18]{Woodstock '18: ACM Symposium on Neural
-  Gaze Detection}{June 03--05, 2018}{Woodstock, NY}
+  Gaze Detection}{June 03--05, 2018}{Woodstock, NY} 
 \acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
-  June 03--05, 2018, Woodstock, NY}
+  June 03--05, 2018, Woodstock, NY} 
 \acmPrice{15.00}
-\acmISBN{978-1-4503-9999-9/18/06}
+\acmISBN{978-1-4503-XXXX-X/18/06}
+%</manuscript|sigconf|authordraft|sigplan|sigchi|sigchi-a|acmsmall-conf>
+
+%<*acmsmall|acmlarge|acmtog>
+%%
+%% These commands are for a JOURNAL article.
+%<acmsmall>\acmJournal{JACM}
+%<acmlarge>\acmJournal{POMACS}
+%<acmtog>\acmJournal{TOG}
+\acmVolume{37}
+\acmNumber{4}
+\acmArticle{111}
+\acmMonth{8}
+%</acmsmall|acmlarge|acmtog>
+%<*manuscript|acmsmall|acmlarge|acmtog|sigconf|authordraft|sigplan|sigchi|sigchi-a|acmsmall-conf>
 
 
 %%
-%% Submission ID.
+%% Submission ID. 
 %% Use this when submitting an article to a sponsored event. You'll
 %% receive a unique submission ID from the organizers
 %% of the event, and this ID should be used as the parameter to this command.
 %%\acmSubmissionID{123-A56-BU3}
+
 
 %%
 %% The majority of ACM publications use numbered citations and
@@ -64,9 +69,10 @@
 %% If you are preparing content for an event
 %% sponsored by ACM SIGGRAPH, you must use the "author year" style of
 %% citations and references.
-%% Uncommenting
-%% the next command will enable that style.
-%%\citestyle{acmauthoryear}
+%<!acmtog>%% Uncommenting 
+%<!acmtog>%% the next command will enable that style.
+%<!acmtog>%%\citestyle{acmauthoryear}
+%<acmtog>\citestyle{acmauthoryear}
 
 %%
 %% end of the preamble, start of the body of the document source.
@@ -81,7 +87,7 @@
 %% The "author" command and its associated commands are used to define
 %% the authors and their affiliations.
 %% Of note is the shared affiliation of the first two authors, and the
-%% "authornote" and "authornotemark" commands
+%% "authornote" and "authornotemark" commands 
 %% used to denote shared contribution to the research.
 \author{Ben Trovato}
 \authornote{Both authors contributed equally to this research.}
@@ -120,7 +126,7 @@
  \city{Doimukh}
  \state{Arunachal Pradesh}
  \country{India}}
-
+ 
 \author{Huifen Chan}
 \affiliation{%
   \institution{Tsinghua University}
@@ -148,15 +154,15 @@
 
 %%
 %% By default, the full list of authors will be used in the page
-%% headers. Often, this list is too long, and will overlap
+%% headers. Often, this list is too long, and will overlap 
 %% other information printed in the page headers. This command allows
-%% the author to define a more concise list
+%% the author to define a more concise list 
 %% of authors' names for this purpose.
 \renewcommand{\shortauthors}{Trovato and Tobin, et al.}
 
 %%
 %% The abstract is a short summary of the work to be presented in the
-%% article.
+%% article. 
 \begin{abstract}
   A clear and well-documented \LaTeX\ document is presented as an
   article formatted for publication by ACM in a conference proceedings
@@ -205,6 +211,20 @@
 %% the work being presented. Separate the keywords with commas.
 \keywords{datasets, neural networks, gaze detection, text tagging}
 
+%</manuscript|acmsmall|acmlarge|acmtog|sigconf|authordraft|sigplan|sigchi|sigchi-a|acmsmall-conf>
+%<*sigconf|authordraft|sigplan|acmsmall-conf>
+%% A "teaser" image appears between the author and affiliation
+%% information and the body of the document, and typically spans the
+%% page.
+\begin{teaserfigure}
+  \includegraphics[width=\textwidth]{sampleteaser}
+  \caption{Seattle Mariners at Spring Training, 2010.}
+  \Description{Enjoying the baseball game from the third-base
+  seats. Ichiro Suzuki preparing to bat.} 
+  \label{fig:teaser}
+\end{teaserfigure}
+%</sigconf|authordraft|sigplan|acmsmall-conf>
+%<*manuscript|acmsmall|acmlarge|acmtog|sigconf|authordraft|sigplan|sigchi|sigchi-a|acmsmall-conf>
 
 %%
 %% This command processes the author and affiliation and title
@@ -290,8 +310,17 @@ Frequently-used parameters, or combinations of parameters, include:
 This document uses the following string as the first command in the
 source file:
 \begin{verbatim}
-\documentclass[sigchi]{acmart}
+%<manuscript>\documentclass[manuscript,screen]{acmart}
+%<acmsmall|acmsmall-conf>\documentclass[acmsmall]{acmart}
+%<acmlarge>\documentclass[acmlarge]{acmart}
+%<acmtog>\documentclass[acmtog]{acmart}
+%<sigconf>\documentclass[sigconf]{acmart}
+%<authordraft>\documentclass[sigconf,authordraft]{acmart}
+%<sigplan>\documentclass[sigplan,screen]{acmart}
+%<sigchi>\documentclass[sigchi]{acmart}
+%<sigchi-a>\documentclass[sigchi-a]{acmart}
 \end{verbatim}
+
 
 \section{Modifications}
 
@@ -437,7 +466,8 @@ Table~\ref{tab:freq} is included in the input file; compare the
 placement of the table here with the table in the printed output of
 this document.
 
-\begin{table}
+%<!sigchi-a>\begin{table}
+%<sigchi-a>\begin{margintable}
   \caption{Frequency of Special Characters}
   \label{tab:freq}
   \begin{tabular}{ccl}
@@ -450,7 +480,8 @@ this document.
     $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
   \bottomrule
 \end{tabular}
-\end{table}
+%<!sigchi-a>\end{table}
+%<sigchi-a>\end{margintable}
 
 To set a wider table, which takes up the whole width of the page's
 live area, use the environment \textbf{table*} to enclose the table's
@@ -526,14 +557,16 @@ The ``\verb|figure|'' environment should be used for figures. One or
 more images can be placed within a figure. If your figure contains
 third-party material, you must clearly identify it as such, as shown
 in the example below.
-\begin{figure}[h]
+%<!sigchi-a>\begin{figure}[h]
+%<sigchi-a>\begin{marginfigure}
   \centering
   \includegraphics[width=\linewidth]{sample-franklin}
   \caption{1907 Franklin Model D roadster. Photograph by Harris \&
     Ewing, Inc. [Public domain], via Wikimedia
     Commons. (\url{https://goo.gl/VLCRBB}).}
   \Description{The 1907 Franklin Model D roadster.}
-\end{figure}
+%<!sigchi-a>\end{figure}
+%<sigchi-a>\end{marginfigure}
 
 Your figures should contain a caption which describes the figure to
 the reader. Figure captions go below the figure. Your figures should
@@ -676,7 +709,7 @@ To Robert, for the bagels and explaining CMYK and color spaces.
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{sample-base}
 
-%%
+%% 
 %% If your work has an appendix, this is the place to put it.
 \appendix
 
@@ -711,6 +744,4 @@ rhoncus. Maecenas eu arcu ac neque placerat aliquam. Nunc pulvinar
 massa et mattis lacinia.
 
 \end{document}
-\endinput
-%%
-%% End of file `sample-sigchi.tex'.
+%</manuscript|acmsmall|acmlarge|acmtog|sigconf|authordraft|sigplan|sigchi|sigchi-a|acmsmall-conf>
