@@ -3,9 +3,15 @@ Repository for Data Science class at Institute Superior Técnico.
 
 **deadline** - November 22nd (23:59)
 
+##### Report:
+> https://docs.google.com/document/d/1ckBNcoYm2KDTkK0Ytd3hv51d0GjNczayprSZeywLYeA/edit?usp=sharing
+
+
+##### Course page:
 >[https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre](https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre)
 
 ![DSCREW](img/dscrew.jpg)
+
 
 ## Delivery
 - submit into Fenix system
